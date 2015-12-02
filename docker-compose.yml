@@ -12,5 +12,8 @@ web:
 
 db:
   image: mongo:latest
+  volumes:
+    - ./data:/data
   ports:
     - "27017:27017"
+  command: --smallfiles
